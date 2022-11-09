@@ -74,7 +74,7 @@ Ok, we know that the bill price goes from `$18,25 till $118,75` but...how're the
 - Expensive
 - Expensive +
 
-It's possible to see by the red line, that `the ammount of churns is expressive between $60 and $80 range` and slowly decreases after the $100 mark. To take a better look at this phenomena, I plotted the relation between those price ranges mentioned above and the Churn numbers.
+It's possible to see by the red line, that `the ammount of churns is expressive between $60 and $100 range` and slowly decreases after the $100 mark. To take a better look at this phenomena, I plotted the relation between those price ranges mentioned above and the Churn numbers.
     
 ![4](https://github.com/Fred-And/novaphone/blob/main/img/churn_by_price_intervals.png)
     
@@ -82,7 +82,19 @@ It's possible to see by the red line, that `the ammount of churns is expressive 
 > NovaPhone could renegociate the bill prices whether by increasing the number services provided with no additional fees or by reducing the price untill it reaches the Medium or Cheap range.
 ___
 Ok, so far we've concluded that:
-1. Churn is higher in the first five months of contract.
-2. It's better for NovaPhone to close at least annual contracts in order to decrease the churn caused by Monthly contracts.
-3. Considering the created price ranges, the customers located within the Expensive price range ($60 - $100), are more likely to churn.
+- [x] Churn is higher in the first five months of contract.
+- [x] It's better for NovaPhone to close at least annual contracts in order to decrease the churn caused by Monthly contracts.
+- [x] Considering the created price ranges, the customers located within the Expensive price range ($60 - $100), are more likely to churn.
     
+After that, I got myself thinking about the distribution of the bill prices and the contract duration. What's the correlation between them and double check the `"Churn price range"` if we may call it this way.
+    
+![5](https://github.com/Fred-And/novaphone/blob/main/img/kde_month_bill_contract.png)
+    
+This density plot shows that if a client with 0 - 5 months of NovaPhone is having to pay a monthly subscription of $60 to $100, the chances of churn are higher. **BUT** `who has to tell me whether a client will or will not drop is the algorithm, not my intuition`
+    
+So let's jump into the
+
+## Modeling
+    
+Alright, we already know that we're dealing with a `classification problem`. In order to help me with that, I'll apply three different classification models and check which one fits (literally) the best in our situation.
+
