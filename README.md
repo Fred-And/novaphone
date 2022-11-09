@@ -65,4 +65,24 @@ The second thing that I wanted to see, was the realation between the Churn and t
 > It gets clear for us that NovaPhone has `more clients dropping out when it's a Monthy contract`. This is a logical conclusion but maybe it's interesting to check for bonuses or lower prices for Anual plans, this way people will see more advantages on paying for a whole year.
 ___
 Ok, we know that the bill price goes from `$18,25 till $118,75` but...how're they distributed?
+
 ![3](https://github.com/Fred-And/novaphone/blob/main/img/bill_price_distribution.png)
+    
+`I ploted this histogram with only 4 bins on purpose.` I wanted to see how the prices are distributed within this range because that's the price range I'll split the data between:
+- Cheap
+- Medium
+- Expensive
+- Expensive +
+
+It's possible to see by the red line, that `the ammount of churns is expressive between $60 and $80 range` and slowly decreases after the $100 mark. To take a better look at this phenomena, I plotted the relation between those price ranges mentioned above and the Churn numbers.
+    
+![4](https://github.com/Fred-And/novaphone/blob/main/img/churn_by_price_intervals.png)
+    
+**Bam!** That's pretty much what we were expecting, `bigger concentration of churns in the Expensive range.` 
+> NovaPhone could renegociate the bill prices whether by increasing the number services provided with no additional fees or by reducing the price untill it reaches the Medium or Cheap range.
+___
+Ok, so far we've concluded that:
+1. Churn is higher in the first five months of contract.
+2. It's better for NovaPhone to close at least annual contracts in order to decrease the churn caused by Monthly contracts.
+3. Considering the created price ranges, the customers located within the Expensive price range ($60 - $100), are more likely to churn.
+    
