@@ -98,3 +98,46 @@ So let's jump into the
     
 Alright, we already know that we're dealing with a `classification problem`. In order to help me with that, I'll apply three different classification models and check which one fits (literally) the best in our situation.
 
+Before start, let's balance our data...you can check the left image below where we have the `y - Churn` befeore balancing. We had only few samples of `Churn = 1` 
+
+> Considering that this model is all about predicting Churns == 1, we really need to balance this data to help the model achive better results.
+
+The right image shows the result after the `Oversampling`.
+
+![6](https://github.com/Fred-And/novaphone/blob/main/img/before_after.png)
+
+### Great! We did it!
+
+Now let's put our modeling skills in the game. `I'll be using three different classification algorithms`.
+- K-Nearest Neighbors (KNN)
+- Naive Bayes
+- Decision Tree Classification
+
+___
+`KNN using hte Euclidean metric`
+![7](https://github.com/Fred-And/novaphone/blob/main/img/knn_modeling.png)
+___
+
+`BNN usinf the BernoulliNB`
+
+![8](https://github.com/Fred-And/novaphone/blob/main/img/nb_modeling.png)
+___
+
+`DTC using the Gini Impurity criteria instead of entrophy`
+
+![9](https://github.com/Fred-And/novaphone/blob/main/img/dtc_modeling.png)
+
+## Metrics
+Used Metrics
+- Confusion Matrix
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+
+![10](https://github.com/Fred-And/novaphone/blob/main/img/confusion_matrix.png)
+![11](https://github.com/Fred-And/novaphone/blob/main/img/accuracy_score.png)
+![12](https://github.com/Fred-And/novaphone/blob/main/img/precision_score.png)
+![13](https://github.com/Fred-And/novaphone/blob/main/img/recall_score.png)
+![14](https://github.com/Fred-And/novaphone/blob/main/img/f1_score.png)
+
